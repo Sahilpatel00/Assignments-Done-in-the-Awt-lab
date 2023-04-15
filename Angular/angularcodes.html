@@ -1,0 +1,490 @@
+<!--directive-->
+<!--app directive-->
+<!--<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AngularJS App directive</title>
+    <script src="angular.min.js"></script>
+</head>
+
+<body>
+    <div ng-app=" ">
+        The AngularJS application has been started.
+    </div>
+</body>
+
+</html> -->
+
+<!--bind directive-->
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <title>AngularJS</title>
+    <script src="angular.min.js">
+    </script>
+</head>
+
+<body>
+    <div ng-app="">
+        <p>User Name: <br> <input type="text" ng-model="Username"></p>
+        <p ng-bind="Username"></p>
+    </div>
+</body>
+
+</html> -->
+
+<!--init directive-->
+ <!--<html>
+
+<head>
+    <title>AngularJSfor beginners</title>
+    <script src="angular.min.js">
+    </script>
+</head>
+
+<body>
+    <div ng-app="" ng-init="Username= 'Sahil Godhani' ">
+        <p>User Name:
+            <input type="text" ng-model="Username"></p>
+        <p ng-bind="Username"></p>
+    </div>
+</body>
+
+</html> -->
+<!--repeat directive-->
+<!-- <html>
+
+<head>
+    <title>AngularJS</title>
+    <script src="angular.min.js">
+    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> </head>
+
+<body>
+    <div ng-app="" ng-init="ColorName = ['Pink', 'Red', 'Green', 'Blue',
+'Black', 'White', 'Yellow', 'Gray']">
+        <p style="color:green; fontweight:bold">Colours Name:</p>
+        <ol>
+            <li ng-repeat="x in ColorName">
+                <p ng-bind="x"></p>
+            </li>
+        </ol>
+    </div>
+</body>
+
+</html> -->
+<!--valid directive-->
+<!-- <!DOCTYPE html>
+<html ng-app="">
+
+<head>
+    <script src="angular.min.js"></script>
+    <meta charset="utf-8">
+    <style>
+        input.ng-valid {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        Please input your number:<br>
+        <input type="number" ng-model="psw" required>
+    </form>
+</body>
+
+</html> -->
+<!--directives in dom-->
+<!--show directive dom-->
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <title>AngularJS</title>
+    <script src="angular.min.js">
+    </script>
+</head>
+
+<body>
+    <h3>Using Show directive</h3>
+    <div ng-app="">
+        <input type="checkbox" ng-model="showHideDiv">Show Div
+        <div ng-show="showHideDiv" style="background-color:yellow;height:50px;">
+            <p>I am a div</p>
+            <p>I appear when the check box is checked.</p>
+        </div>
+    </div>
+</body>
+
+</html> -->
+<!--hide directive-->
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <title>AngularJS</title>
+    <script src="angular.min.js">
+    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> </head>
+
+<body>
+    <h3>Using Hide directive</h3>
+    <div ng-app="">
+        <input type="checkbox" ng-model="HideShowDiv">Hide Div
+        <div ng-hide="HideShowDiv" style="background-color:pink;height:50px;">
+            <p>I am a div</p>
+            <p>I will disappeared when the check box is checked.</p>
+        </div>
+    </div>
+</body>
+
+</html> -->
+<!--disable directive-->
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <title>AngularJS</title>
+    <script src="angular.min.js">
+    </script>
+</head>
+
+<body>
+    <h3>Using Disable directive</h3>
+    <div ng-app="">
+        <input type="checkbox" ng-model="DisableEnable">Disable Button<br>
+        <br><br> <input type="button" ng-disabled="DisableEnable" value="Submit"> </div>
+</body>
+
+</html> -->
+<!--click directive-->
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <title>AngularJS</title>
+    <script src="angular.min.js">
+    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+    <h3>Using Click directive</h3>
+    <div ng-app="" nginit="increaseNumber=0"> <button ng-click="increaseNumber =
+increaseNumber + 1">Click Me!</button>
+        <p ng-bind="increaseNumber" style="color:blue"></p>
+    </div>
+</body>
+
+</html> -->
+<!--if directive-->
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <script src="angular.min.js"></script>
+    <meta charset="utf-8">
+</head>
+
+<body ng-app="" align="center"><br><br> <input type="checkbox" nginit="result = true" ng-model="result">
+    <div ng-if="result"> // check true or false
+        <p>When you check the box, <br> the text will be shown.<br> When you uncheck the box, <br> the text will be hidden.</p>
+    </div>
+</body>
+
+</html> -->
+<!--Filters-->
+<!--uppercase-->
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <title>AngularJS</title>
+    <script src="angular.min.js">
+    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> </head>
+
+<body>
+    <h3>Using Upper Case Filter</h3>
+    <div ng-app="" ng-init="Username=
+'ray' ">
+        <p>User Name: <input type="text" ng-model="Username"></p>
+        <p style="color:red" ng-bind="Username | uppercase"></p>
+    </div>
+</body>
+
+</html> -->
+<!--lowercase-->
+<!-- <html>
+
+<head>
+    <title>AngularJS</title>
+    <script src="angular.min.js">
+    </script>
+</head>
+
+<body>
+    <h3>Using Lower Case Filter</h3>
+    <div ng-app="" ng-init="Username='ABC' ">
+        <p>User Name: <input type="text" ng-model="Username">
+        </p>
+        <p style="color:red" ng-bind="Username | lowercase"></p>
+    </div>
+</body>
+
+</html> -->
+<!--orderby-->
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <title>AngularJS</title>
+    <script src="angular.min.js">
+    </script>
+</head>
+
+<body>
+    <h1>Using OrderBy filter</h1>
+    <div ng-app="" ng-init="StudentsResult=
+[{name: 'Tienq', marks:81}, {name: 'Svbrf', marks:70},
+{name: 'Yaito', marks:90}, {name: 'Pewfn', marks:63}, {name:
+'Riet', marks:98}]">
+        <table border="1">
+            <tr>
+                <th>Student Name</th>
+                <th>Mathematics’ Result</th>
+            </tr>
+            <tr ng-repeat="x in StudentsResult | orderBy:'-marks' ">
+                <td ng-bind="x.name "></td>
+                <td ng-bind="x.marks "></td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html> -->
+
+<!--currency-->
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <title>AngularJS</title>
+    <script src="angular.min.js">
+    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> </head>
+
+<body>
+    <h1>Using Currency filter</h1>
+    <div ng-app="" ng-init="Employees_Monthly_Salary=[{name: 'Jay', salary:8100}, {name: 'Sdwt',salary:7000}, {name: 'Hao', salary:9000}, {name: 'Luoe',salary:6300}, {name: 'Fin', salary:9800}]">
+        <table border="1">
+            <tr>
+                <th>Employee Name</th>
+                <th>Employee Salary</th>
+            </tr>
+            <tr ng-repeat="x in Employees_Monthly_Salary ">
+                <td ng-bind="x.name
+"></td>
+                <td ng-bind="x.salary | currency "></td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html> -->
+
+
+<!--Events-->
+<!--click-->
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <title>AngularJS</title>
+    <script src="angular.min.js">
+    </script>
+</head>
+
+<body>
+    <h3>Add Two Numbers Using Click Event</h3>
+    <div ng-app="" nginit="firstNumber=47; secondNumber=23">
+        <p>First Number : <input type="number" ng-model="firstNumber"></p>
+        <p>Second Number:
+            <input type="number" ng-model="secondNumber"></p> <button ng-click="Result=firstNumber + secondNumber"> Add Numbers </button>
+        <p>Result:
+            <p style="font-weight:bold; color:blue" ng-bind="Result">
+            </p>
+        </p>
+    </div>
+</body>
+
+</html> -->
+
+<!--mouse over-->
+<!-- <!doctype html>
+<html>
+<script src="angular.min.js"></script>
+
+<body ng-app="">
+    <br><br>
+    <textarea ng-mouseover="count = count + 1" ng-init="count=0">
+Here is a textarea.
+</textarea>
+    <br><br>
+    <h2>count: {{count}}</h2>
+</body>
+
+</html> -->
+
+<!--mouse leave-->
+<!-- <!doctype html>
+<html>
+
+<head>
+    <script src="angular.min.js">
+    </script>
+</head>
+
+<body ng-app=""> <br><br>
+    <textarea ng-mouseleave="count = count + 1" ng-init="count=0"> Here is a textarea
+</textarea>
+    <br><br>
+    <h2>count: {{count}}</h2>
+
+    <body>
+
+</html> -->
+
+<!--key up-->
+<!-- <!doctype html>
+<html>
+
+<head>
+    <script src="angular.min.js">
+    </script>
+</head>
+
+<body ng-app="">
+    <br><br>
+    <textarea ng-keyup="count = count + 1" ng-init="count=0">
+Here is a textarea
+</textarea>
+    <br><br>
+    <h2>count: {{count}}</h2>
+
+    <body>
+
+</html> -->
+
+<!--copy cut-->
+<!-- <!doctype html>
+<html ng-app>
+
+<head>
+    <script src="angular.min.js"></script>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <br>
+    <input ng-copy="result1=true" ng-init="result1=false;
+value1='please copy me'" ng-model="value1"> copy status: {{result1}}</br><br>
+    <input ng-cut="result2=true" ng-init="result2=false;
+value2='please cut me'" ng-model="value2"> cut status: {{result2}}
+</body>
+
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="">
+        <p>Input my id in the input box:</p>
+        <>
+            <input type="text" ng-model="id" >
+            <br>
+            <h1>Welcome! {{id}}</h1>
+    </div>
+</body>
+</html> -->
+<!-- Expressions
+String expressions: -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>AngularJS</title>
+    <script src="angular.min.js">
+    </script>
+</head>
+<body>
+    <h4>Combine Two String Using String Expression</h4>
+    <div ng-app="">
+        First String &nbsp;&nbsp;&nbsp;: <input type="text" ng-model="firstString" /><br><br> Second String: <input ng-model="secondString" /><br><br> Resulting String:
+        <p style="color:blue;font-weight:bold;">{{firstString +" "+secondString}}
+        </p>
+    </div>
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html ng-app="">
+<head>
+    <script src="angular.min.js"></script>
+</head>
+<body>
+    <form name="iForm">
+        Please input your email address: <br><br>
+        <input type="email" name="eMailAddr" ng-model="text"> <br><br>
+        <div ng-show="iForm.eMailAddr.$error.email"> Invalid email address!</div>
+    </form>
+</body>
+</html> -->
+<!-- <html>
+<script src="angular.min.js"></script>
+<body>
+    <h4>Object Expression</h4>
+    <div ng-app="" ng-init="EmployeeObject =
+{Emp_name: 'Sahil Godhani', Emp_Month: 'November.18,1999', Emp_salary:
+'$9999999999'}">
+        <p>Employee Name : {{EmployeeObject.Emp_name}}</p>
+        <p>Salary's Month: {{EmployeeObject.Emp_Month}}</p>
+        <p>Employee Salary: {{EmployeeObject.Emp_salary}}</p>
+    </div>
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>
+        AngularJs Custom Filter Example
+    </title>
+    <script src="angular.min.js"></script>
+    <script type="text/javascript">
+        var app = angular.module('angularcustomapp', []);
+        app.filter('dash', function() {
+            return function(input) {
+                return input.replace(/-/g, ' ');
+            };
+        });
+        app.controller('CustomCtrl', function($scope) {
+            $scope.name = 'Example-of-Angular-js-Hello-this-is-sahil-godhani'
+        });
+    </script>
+</head>
+<body ng-app="angularcustomapp">
+    <div ng-controller="CustomCtrl">
+        <p>
+            {{ name | dash:'-':' ' }}
+        </p>
+    </div>
+</body>
+</html> -->
+

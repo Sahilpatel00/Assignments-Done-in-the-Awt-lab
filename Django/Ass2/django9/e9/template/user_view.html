@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+            table, th, td {
+              border: 1px solid black;
+              border-collapse: collapse;
+            }
+            tr:nth-child(even) {
+                background-color: rgba(150, 212, 212, 0.4);
+              }
+              
+              th:nth-child(even),td:nth-child(even) {
+                background-color: rgba(150, 212, 212, 0.4);
+              }
+    </style>
+          
+    <meta charset="utf-8">
+    <title>User List</title>
+</head>
+<body>
+    <h1>User List</h1>
+    <table style="width:50%">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Hobby</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+            <tr>
+                <td>{{ user.name }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.address }}</td>
+                <td>{{ user.hobby }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <a href="{% url 'user_form' %}">Add User</a>
+</body>
+</html>

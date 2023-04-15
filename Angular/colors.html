@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="angular.min.js"></script>
+    <script src="colors.js"></script>
+</head>
+<body ng-app="myApp">
+    <div ng-controller="myController">
+        <button ng-click="colors()">{{message}} Available colors</button>
+        <br><br>
+        <div color ng-show="showMe">
+            <div style="background-color: red;">Red</div><hr>
+            <div style="background-color: green;">Green</div><hr>
+            <div style="background-color: blue;">Blue</div><hr>
+            <div style="background-color: purple;">Purple</div><hr>
+            <div style="background-color: darkslategrey;">Dark State Grey</div><hr>
+            <div style="background-color: olive;">Olive</div><hr>
+        </div>
+    </div>
+</body>
+</html>

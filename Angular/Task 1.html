@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>task-1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="angular.min.js"></script>
+</head>
+
+<body ng-app>
+    <button id="toggleMessage" ng-click="toggle=!toggle">
+    {{toggle ? 'Hide available colors' : 'Show available colors'}}
+    </button>
+    <div id="box" ng-show="toggle">
+        <svg width="400" height="110">
+            <rect width="300" height="100" style="fill:red;">
+        </svg>
+        <svg width="400" height="110">
+            <rect width="300" height="100" style="fill:green;" />
+        </svg>
+        <svg width="400" height="110">
+            <rect width="300" height="100" style="fill:blue;" />
+        </svg>
+        <svg width="400" height="110">
+            <rect width="300" height="100" style="fill:purple;" />
+        </svg>
+        <svg width="400" height="110">
+            <rect width="300" height="100" style="fill:gray;" />
+        </svg>
+        <svg width="400" height="110">
+            <rect width="300" height="100" style="fill:olive;" />
+        </svg>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task-2</title>
+    <script src="angular.min.js"></script>
+</head>
+
+<body>
+    <div ng-app="myApp" ng-controller="datCtrl">
+        <p>
+            Formatted Date with standard filter (ShortDate): {{ dateValue | date:'shortDate' }}
+        </p>
+        <p>
+            Formatted Date with standard filter (MediumDate): {{ dateValue | date:'mediumDate' }}
+        </p>
+        <p>
+            Formatted Date with standard filter (Medium): {{ dateValue | date:'medium' }}
+        </p>
+        <p>
+            The customer joined in the month of {{dateValue | date:'MMMM'}} on a {{dateValue | date:'EEEE'}} at {{dateValue | date:'h a'}}
+        </p>
+    </div>
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('datCtrl', function($scope) {
+            $scope.dateValue = new Date();
+        });
+    </script>
+</body>
+
+</html> -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        AngularJs Custom Filter Example
+    </title>
+    <script src="angular.min.js"></script>
+    <script type="text/javascript">
+        var app = angular.module('angularcustomapp', []);
+
+        app.filter('dash', function() {
+            return function(input) {
+                return input.replace(/-/g, ' ');
+            };
+        });
+
+        app.controller('CustomCtrl', function($scope) {
+
+            $scope.name = 'Example-of-Angular-js​ Hello-this-is-sahil-godhani-​'
+
+        });
+    </script>
+
+</head>
+
+<body ng-app="angularcustomapp">
+
+    <div ng-controller="CustomCtrl">
+
+
+        <p>
+
+
+            {{ name | dash:'-':' ' }}
+
+        </p>
+
+    </div>
+
+</body>
+
+</html>

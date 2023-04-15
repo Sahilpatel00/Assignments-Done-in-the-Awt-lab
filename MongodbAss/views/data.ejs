@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>User Data</title>
+</head>
+
+<body>
+    <h1>User Data</h1>
+    <% if (users.length) { %>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>Hobbies</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% users.forEach(function(user) { %>
+                    <tr>
+                        <td>
+                            <%= user.name %>
+                        </td>
+                        <td>
+                            <%= user.email %>
+                        </td>
+                        <td>
+                            <%= user.address %>
+                        </td>
+                        <td>
+                            <% if (user.hobby1) { %>
+                                <%= user.hobby1 %><br>
+                                    <% } %>
+                                        <% if (user.hobby2) { %>
+                                            <%= user.hobby2 %><br>
+                                                <% } %>
+                                                    <% if (user.hobby3) { %>
+                                                        <%= user.hobby3 %><br>
+                                                            <% } %>
+                                                            <% if (user.hobby4) { %>
+                                                                <%= user.hobby4 %><br>
+                                                                    <% } %>
+                        </td>
+                    </tr>
+                    <% }); %>
+            </tbody>
+        </table>
+        <% } else { %>
+            <p>No user data found.</p>
+            <% } %>
+</body>
+
+</html>
